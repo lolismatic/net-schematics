@@ -1,4 +1,4 @@
-# Articlr Solution
+# MyCoolProject Solution
 
 This project was created using @angular-devkit/schematics.
 

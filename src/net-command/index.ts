@@ -1,4 +1,4 @@
-import { Rule, SchematicContext, Tree, template, apply, url, mergeWith } from '@angular-devkit/schematics';
+import { Rule, SchematicContext, Tree, template, apply, url, mergeWith, MergeStrategy, forEach } from '@angular-devkit/schematics';
 import { strings } from '@angular-devkit/core';
 import { from, of, Observable } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
@@ -11,7 +11,7 @@ inquirer.registerPrompt('autocomplete', autocompletePrompt as any);
 
 function getResources(): Promise<any[]> {
    return new Promise(resolve => {
-        glob('src/*.Api/*Controller.cs', (_, matches) => {
+        glob('src/*.Api/**/*Controller.cs', (_, matches) => {
             const matchMap = matches
                 .map(match => match.split(/\\|\//g).reverse()[0].slice(0, -('Controller.cs'.length)))
                 .filter(resourceName => resourceName !== 'Base')
@@ -39,19 +39,20 @@ async function getOptions(): Promise<any> {
     } as any, {
         type: 'string',
         name: 'commandName',
-        message: 'Command name'
+        message: 'Name'
     }, {
         type: 'list',
         name: 'commandMethod',
+        message: 'Http method',
         choices: ['Post', 'Delete', 'Put', 'Patch', 'Get']
     }, {
         type: 'string',
         name: 'commandRoute',
-        message: 'Command route:'
+        message: 'Http route:'
     }, {
         type: 'string',
         name: 'commandResponse',
-        message: 'Command response'
+        message: 'Response class'
     }]);
 }
 
@@ -71,7 +72,7 @@ export function netCommand(_: any): Rule {
                         })
                     ]);
 
-                    return mergeWith(parameterizedSourceTemplates)(tree, context) as Observable<Tree>;
+                    return mergeWith(parameterizedSourceTemplates, MergeStrategy.Overwrite)(tree, context) as Observable<Tree>;
                 })
         );
     };
