@@ -1,0 +1,1 @@
+{"mvc":{"version":"2.2.0"},"name":"Articlr","framework":"netcoreapp2.2","targetOs":"Linux","logging":"log4net","loggingConfig":"log4net.config"}
