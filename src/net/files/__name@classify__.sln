@@ -1,0 +1,113 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{<%= guid('server-project') %>}") = "<%= classify(name) %>.Server", "src\<%= classify(name) %>.Server\<%= classify(name) %>.Server.csproj", "{<%= guid('server-project-configuration') %>}"
+EndProject
+Project("{<%= guid('api-project') %>}") = "<%= classify(name) %>.Api", "src\<%= classify(name) %>.Api\<%= classify(name) %>.Api.csproj", "{<%= guid('api-project-configuration') %>}"
+EndProject
+Project("{<%= guid('infrastructure-project') %>}") = "<%= classify(name) %>.Api", "src\<%= classify(name) %>.Infrastructure\<%= classify(name) %>.Infrastructure.csproj", "{<%= guid('infrastructure-project-configuration') %>}"
+EndProject
+Project("{<%= guid('application-project') %>}") = "<%= classify(name) %>.Application", "src\<%= classify(name) %>.Application\<%= classify(name) %>.Application.csproj", "{<%= guid('application-project-configuration') %>}"
+EndProject
+Project("{<%= guid('domain-project') %>}") = "<%= classify(name) %>.Domain", "src\<%= classify(name) %>.Domain\<%= classify(name) %>.Domain.csproj", "{<%= guid('domain-project-configuration') %>}"
+EndProject
+Project("{<%= guid('test-server-project') %>}") = "<%= classify(name) %>.Server.Tests", "tests\<%= classify(name) %>.Server.Tests\<%= classify(name) %>.Server.Tests.csproj", "{<%= guid('test-server-project-configuration') %>}"
+EndProject
+Project("{<%= guid('test-api-project') %>}") = "<%= classify(name) %>.Api.Tests", "tests\<%= classify(name) %>.Api.Tests\<%= classify(name) %>.Api.Tests.csproj", "{<%= guid('test-api-project-configuration') %>}"
+EndProject
+Project("{<%= guid('test-infrastructure-project') %>}") = "<%= classify(name) %>.Api.Tests", "tests\<%= classify(name) %>.Infrastructure.Tests\<%= classify(name) %>.Infrastructure.Tests.csproj", "{<%= guid('test-infrastructure-project-configuration') %>}"
+EndProject
+Project("{<%= guid('test-application-project') %>}") = "<%= classify(name) %>.Application.Tests", "tests\<%= classify(name) %>.Application.Tests\<%= classify(name) %>.Application.Tests.csproj", "{<%= guid('test-application-project-configuration') %>}"
+EndProject
+Project("{<%= guid('test-domain-project') %>}") = "<%= classify(name) %>.Domain.Tests", "tests\<%= classify(name) %>.Domain.Tests\<%= classify(name) %>.Domain.Tests.csproj", "{<%= guid('test-domain-project-configuration') %>}"
+EndProject
+Project("{<%= guid('e2e-project') %>}") = "<%= classify(name) %>.E2E", "e2e\<%= classify(name) %>.E2E\<%= classify(name) %>.E2E.csproj", "{<%= guid('e2e-project-configuration') %>}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C83C7A08-0D82-4BAC-9458-B02D2954BD59}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A7932510-C82A-4017-85FD-591FB4830CD0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3DD1BD80-7438-4A79-B3E5-768865BCFF42}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "e2e", "e2e", "{D3D3FB37-1303-4928-B247-E6289BCD21A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{<%= guid('server-project-configuration') %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= guid('server-project-configuration') %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= guid('server-project-configuration') %>}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{<%= guid('server-project-configuration') %>}.Release|Any CPU.Build.0 = Release|Any CPU
+		{<%= guid('api-project-configuration') %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= guid('api-project-configuration') %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= guid('api-project-configuration') %>}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{<%= guid('api-project-configuration') %>}.Release|Any CPU.Build.0 = Release|Any CPU
+		{<%= guid('infrastructure-project-configuration') %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= guid('infrastructure-project-configuration') %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= guid('infrastructure-project-configuration') %>}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{<%= guid('infrastructure-project-configuration') %>}.Release|Any CPU.Build.0 = Release|Any CPU
+		{<%= guid('application-project-configuration') %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= guid('application-project-configuration') %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= guid('application-project-configuration') %>}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{<%= guid('application-project-configuration') %>}.Release|Any CPU.Build.0 = Release|Any CPU
+		{<%= guid('domain-project-configuration') %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= guid('domain-project-configuration') %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= guid('domain-project-configuration') %>}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{<%= guid('domain-project-configuration') %>}.Release|Any CPU.Build.0 = Release|Any CPU
+		{<%= guid('test-server-project-configuration') %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= guid('test-server-project-configuration') %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= guid('test-server-project-configuration') %>}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{<%= guid('test-server-project-configuration') %>}.Release|Any CPU.Build.0 = Release|Any CPU
+		{<%= guid('test-api-project-configuration') %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= guid('test-api-project-configuration') %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= guid('test-api-project-configuration') %>}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{<%= guid('test-api-project-configuration') %>}.Release|Any CPU.Build.0 = Release|Any CPU
+		{<%= guid('test-infrastructure-project-configuration') %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= guid('test-infrastructure-project-configuration') %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= guid('test-infrastructure-project-configuration') %>}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{<%= guid('test-infrastructure-project-configuration') %>}.Release|Any CPU.Build.0 = Release|Any CPU
+		{<%= guid('test-application-project-configuration') %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= guid('test-application-project-configuration') %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= guid('test-application-project-configuration') %>}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{<%= guid('test-application-project-configuration') %>}.Release|Any CPU.Build.0 = Release|Any CPU
+		{<%= guid('test-domain-project-configuration') %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= guid('test-domain-project-configuration') %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= guid('test-domain-project-configuration') %>}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{<%= guid('test-domain-project-configuration') %>}.Release|Any CPU.Build.0 = Release|Any CPU
+		{<%= guid('e2e-project-configuration') %>}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{<%= guid('e2e-project-configuration') %>}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{<%= guid('e2e-project-configuration') %>}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{<%= guid('e2e-project-configuration') %>}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{<%= guid('server-project-configuration') %>} = {A7932510-C82A-4017-85FD-591FB4830CD0}
+		{<%= guid('api-project-configuration') %>} = {A7932510-C82A-4017-85FD-591FB4830CD0}
+		{<%= guid('infrastructure-project-configuration') %>} = {A7932510-C82A-4017-85FD-591FB4830CD0}
+		{<%= guid('application-project-configuration') %>} = {A7932510-C82A-4017-85FD-591FB4830CD0}
+		{<%= guid('domain-project-configuration') %>} = {A7932510-C82A-4017-85FD-591FB4830CD0}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{<%= guid('test-server-project-configuration') %>} = {3DD1BD80-7438-4A79-B3E5-768865BCFF42}
+		{<%= guid('test-api-project-configuration') %>} = {3DD1BD80-7438-4A79-B3E5-768865BCFF42}
+		{<%= guid('test-infrastructure-project-configuration') %>} = {3DD1BD80-7438-4A79-B3E5-768865BCFF42}
+		{<%= guid('test-application-project-configuration') %>} = {3DD1BD80-7438-4A79-B3E5-768865BCFF42}
+		{<%= guid('test-domain-project-configuration') %>} = {3DD1BD80-7438-4A79-B3E5-768865BCFF42}
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{<%= guid('e2e-project-configuration') %>} = {D3D3FB37-1303-4928-B247-E6289BCD21A4}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {<%= guid('solution-guid') %>}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,78 @@
+{
+    "$schema": "http://json-schema.org/schema",
+    "id": "SchematicsNet",
+    "title": "Net Options Schema",
+    "type": "object",
+    "description": "Creates a new net project with onion architecture.",
+    "properties": {
+      "name": {
+        "type": "string",
+        "description": "The name of the component.",
+        "$default": {
+          "$source": "argv",
+          "index": 0
+        },
+        "x-prompt": "What name would you like to use for the project?"
+      },
+      "framework": {
+        "type": "string",
+        "description": "The dotnet framework.",
+        "default": "netcoreapp2.2",
+        "x-prompt": {
+            "message": "Which framework would you like to use?",
+            "type": "list",
+            "items": [
+                {
+                    "value": "netcoreapp2.2",
+                    "label": "netcoreapp2.2"
+                }
+            ]
+        }
+      },
+      "targetOs": {
+        "type": "string",
+        "description": "The target OS.",
+        "default": "Linux",
+        "x-prompt": {
+            "message": "What is the target OS?",
+            "type": "list",
+            "items": [
+                {
+                    "value": "Linux",
+                    "label": "Linux"
+                },
+                {
+                    "value": "Windows",
+                    "label": "Windows"
+                }
+            ]
+        }
+      },
+      "logging": {
+        "type": "string",
+        "description": "The logging framework.",
+        "default": "serilog",
+        "x-prompt": {
+            "message": "Which logging solution would you like to use?",
+            "type": "list",
+            "items": [
+                {
+                    "value": "serilog",
+                    "label": "Serilog"
+                },
+                {
+                    "value": "nlog",
+                    "label": "NLog"
+                },
+                {
+                    "value": "log4net",
+                    "label": "log4net"
+                }
+            ]
+        }
+      }
+    },
+    "required": [
+      "name"
+    ]
+}
