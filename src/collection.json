@@ -3,12 +3,12 @@
   "schematics": {
     "net": {
       "description": "Create a new onion net project.",
-      "factory": "./net/index#net",
+      "factory": "../dist/net/index#net",
       "schema": "./net/schema.json"
     },
     "net-resource": {
       "description": "Create a new resource for the net project.",
-      "factory": "./net-resource/index#netResource",
+      "factory": "../dist/net-resource/index#netResource",
       "schema": "./net-resource/schema.json"
     }
   }

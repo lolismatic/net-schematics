@@ -5,6 +5,7 @@
       "es2018",
       "dom"
     ],
+    "outDir": "dist",
     "declaration": true,
     "module": "commonjs",
     "moduleResolution": "node",
