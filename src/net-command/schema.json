@@ -4,18 +4,5 @@
     "title": "Net Resource Options Schema",
     "type": "object",
     "description": "Creates a new resource in the project.",
-    "properties": {
-      "name": {
-        "type": "string",
-        "description": "The name of the resource.",
-        "$default": {
-          "$source": "argv",
-          "index": 0
-        },
-        "x-prompt": "What name would you like?"
-      }
-    },
-    "required": [
-      "name"
-    ]
+    "properties": {}
 }

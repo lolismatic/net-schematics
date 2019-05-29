@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+      "paths": { "*": ["types/*"] },
     "baseUrl": "tsconfig",
     "lib": [
       "es2018",
@@ -20,6 +21,7 @@
     "sourceMap": true,
     "strictNullChecks": true,
     "target": "es6",
+    "esModuleInterop": true,
     "types": [
       "jasmine",
       "node"

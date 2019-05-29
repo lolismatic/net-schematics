@@ -18,17 +18,17 @@ namespace <%= classify(name) %>.Api.Controllers.<%= classify(resource) %>
     public class <%= classify(resource) %>Controller : BaseController
     {
         /// <summary>
-        /// The <%= classify(command.name) %> command mapping.
+        /// The <%= classify(commandName) %> command mapping.
         /// </summary>
         /// <param name="command">
         /// The command.
         /// </param>
         /// <returns>
         /// The <see cref="Task"/>.
-        /// </returns><% if(command.route) { %>
-        [Http<%= command.method %>("<%= command.route %>")]<% } else { %>
-        [Http<%= command.method %>]<% } %>
-        public async Task<IActionResult> <%= classify(command.name) %>(I<%= classify(command.name) %>Command command)
+        /// </returns><% if(commandRoute) { %>
+        [Http<%= commandMethod %>("<%= commandRoute %>")]<% } else { %>
+        [Http<%= commandMethod %>]<% } %>
+        public async Task<IActionResult> <%= classify(commandName) %>(I<%= classify(commandName) %>Command command)
         {
             return await this.Mediator.Send(command).Switch(
           response => this.Ok(response),
